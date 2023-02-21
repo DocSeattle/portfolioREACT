@@ -1,0 +1,116 @@
+@import '../../styles/defaults.scss';
+@import './keyframes.scss';
+
+$navbutton-bg: $dominant;
+$navbutton-clr: $text;
+$navbutton-glow: $accent;
+.navButton-wrapper {
+    .navButton-container{
+        z-index: 4;
+        .navButton-base a {
+            position: relative;
+            display: inline-block;
+            color: $navbutton-glow;
+            background-color: $navbutton-bg;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: .5s;
+            letter-spacing: 4px;
+            text-decoration: none;
+            border-radius: 2px;
+            padding: 10px 20px;
+            overflow: hidden;
+            a:link {
+                border-radius: 5px;
+            }
+
+            a:visited {
+                border-radius: 5px;
+            }
+
+            &:hover {
+                border-radius: 5px;
+                box-shadow: 0 0 2px $navbutton-glow,
+                0 0 12px $navbutton-glow,
+                0 0 25px $navbutton-glow,
+                0 0 50px $navbutton-glow;
+                
+            }
+            &:focus{
+                border-radius: 5px;
+                box-shadow: 0 0 1px $navbutton-glow,
+                0 0 6px $navbutton-glow,
+                0 0 12px $navbutton-glow,
+                0 0 25px $navbutton-glow;  
+            }
+            &:active {
+                background: $navbutton-bg;
+                color: $navbutton-glow;
+                border-radius: 5px;
+                box-shadow: 0 0 5px $navbutton-glow,
+                            0 0 25px $navbutton-glow,
+                            0 0 50px $navbutton-glow,
+                            0 0 100px $navbutton-glow;
+            }
+            .spanWrapper{
+                & span {
+                    position: absolute;
+                    display: block;
+                }
+                & span:nth-child(1){
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(90deg, transparent, $navbutton-glow);
+                    animation: navBtnAnim1 1s linear infinite;
+                    animation-delay: 0s;
+                }
+
+                & span:nth-child(2){
+                    top: -100%;
+                    right: 0;
+                    width: 2px;
+                    height: 100%;
+                    background: linear-gradient(180deg, transparent, $navbutton-glow);
+                    animation: navBtnAnim2 1s linear infinite;
+                    animation-delay: .25s;
+                }
+
+                & span:nth-child(3){
+                    bottom: 0;
+                    right: -100%;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(270deg, transparent, $navbutton-glow);
+                    animation: navBtnAnim3 1s linear infinite;
+                    animation-delay: .5s;
+                }
+
+                & span:nth-child(4){
+                    bottom: -100%;
+                    left: 0;
+                    width: 2px;
+                    height: 100%;
+                    background: linear-gradient(360deg, transparent, $navbutton-glow);
+                    animation: navBtnAnim4 1s linear infinite;
+                    animation-delay: .75s;
+                }
+            }
+            &:hover .spanWrapper {
+                span:nth-child(1){
+                    animation: 0;
+                }
+                span:nth-child(2){
+                    animation: 0;
+                }
+                span:nth-child(3){
+                    animation: 0;
+                }
+                span:nth-child(4){
+                    animation: 0;
+                }
+            }
+        }
+    }
+}
