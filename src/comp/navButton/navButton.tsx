@@ -6,6 +6,7 @@ interface navButtonProps {
     linkTo: string;
 }
 
+
 export const NavButton = ({ id, text, linkTo}: navButtonProps) => {
     return (
         <div id={id} className="navButton-wrapper">

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {ImageHero} from '../comp/imageHero/imageHero';
+import { NavBarPrimary } from '../comp/navBarPrimary/navBarPrimary';
 import {NavButton} from '../comp/navButton/navButton';
 class Home extends Component {
 
@@ -7,6 +8,7 @@ class Home extends Component {
 
         return (
             <div>
+                <NavBarPrimary />
                 <ImageHero />
                 <NavButton id="navButton" text="Click" linkTo="#"></NavButton>
             </div>

@@ -1,9 +1,8 @@
 import './navBarPrimary.scss';
-import { NavButton } from "./../navButton";
-
+import {NavButton} from "./../../comp/navButton/navButton"
 export const NavBarPrimary = () => {
     return (
-        <div>
+        <div className="navBarWrapper">
             <nav role="navigation">
                 <div className="navBarPrimaryToggle">
                     <input type="checkbox" />
@@ -13,7 +12,7 @@ export const NavBarPrimary = () => {
                     <span></span>
 
                     <ul className="navBarPrimaryMenu">
-                        <li><NavButton id="navBarButtonHome" text="Home" linkTo="#"/></li>
+                        <NavButton id="navBarButtonHome" text="Home" linkTo="#"><li></li></NavButton>
                         <a href="#"><li>About</li></a>
                         <a href="#"><li>Info</li></a>
                         <a href="#"><li>Contact</li></a>
