@@ -10,7 +10,7 @@ class Home extends Component {
             <div>
                 <NavBarPrimary />
                 <ImageHero />
-                <NavButton id="navButton" text="Click" linkTo="#"></NavButton>
+                <NavButton id="navButton" text="\/" linkTo="#" />
             </div>
         );
     }

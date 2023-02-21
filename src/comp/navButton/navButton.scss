@@ -1,21 +1,24 @@
 @import '../../styles/defaults.scss';
 @import './keyframes.scss';
-
+$navbutton-bg-before: transparent;
 $navbutton-bg: $dominant;
 $navbutton-clr: $text;
 $navbutton-glow: $accent;
+
+$navButtonAnimClr1: transparent;
+$navButtonAnimClr2: $navbutton-glow;
 .navButton-wrapper {
     .navButton-container{
         z-index: 4;
         .navButton-base a {
             position: relative;
             display: inline-block;
-            color: $navbutton-glow;
-            background-color: $navbutton-bg;
+            color: $navbutton-clr;
+            background-color: $navbutton-bg-before;
             font-size: 16px;
             text-transform: uppercase;
-            transition: .5s;
-            letter-spacing: 4px;
+            transition: .2s;
+            letter-spacing: auto;
             text-decoration: none;
             border-radius: 2px;
             padding: 10px 20px;
@@ -62,7 +65,7 @@ $navbutton-glow: $accent;
                     left: -100%;
                     width: 100%;
                     height: 2px;
-                    background: linear-gradient(90deg, transparent, $navbutton-glow);
+                    background: linear-gradient(90deg, $navButtonAnimClr1, $navButtonAnimClr2);
                     animation: navBtnAnim1 1s linear infinite;
                     animation-delay: 0s;
                 }
@@ -72,7 +75,7 @@ $navbutton-glow: $accent;
                     right: 0;
                     width: 2px;
                     height: 100%;
-                    background: linear-gradient(180deg, transparent, $navbutton-glow);
+                    background: linear-gradient(180deg, $navButtonAnimClr1, $navButtonAnimClr2);
                     animation: navBtnAnim2 1s linear infinite;
                     animation-delay: .25s;
                 }
@@ -82,7 +85,7 @@ $navbutton-glow: $accent;
                     right: -100%;
                     width: 100%;
                     height: 2px;
-                    background: linear-gradient(270deg, transparent, $navbutton-glow);
+                    background: linear-gradient(270deg, $navButtonAnimClr1, $navButtonAnimClr2);
                     animation: navBtnAnim3 1s linear infinite;
                     animation-delay: .5s;
                 }
@@ -92,12 +95,13 @@ $navbutton-glow: $accent;
                     left: 0;
                     width: 2px;
                     height: 100%;
-                    background: linear-gradient(360deg, transparent, $navbutton-glow);
+                    background: linear-gradient(360deg, $navButtonAnimClr1, $navButtonAnimClr2);
                     animation: navBtnAnim4 1s linear infinite;
                     animation-delay: .75s;
                 }
             }
             &:hover .spanWrapper {
+                
                 span:nth-child(1){
                     animation: 0;
                 }

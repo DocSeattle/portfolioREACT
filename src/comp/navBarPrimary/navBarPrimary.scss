@@ -2,7 +2,6 @@
 
 .navBarWrapper {
     .navBarPrimaryToggle {
-        overflow: hidden;
         display: block;
         position: relative;
         top: 25px;
@@ -13,11 +12,15 @@
 
         & a {
             text-decoration: none;
-            color: #232323;
+            color: $text;
             transition: color 0.3s ease;
-            
+            padding-top: 40px;
+
             &:hover{
-                color: tomato;
+                color: lightgreen;
+            }
+            &:active{
+                color: $accent;
             }
         }
         & input {
@@ -39,7 +42,7 @@
             height: 4px;
             margin-bottom: 5px;
             position: relative;
-            background: #cdcdcd;
+            background: $text;
             border-radius: 3px;
             z-index: 1;
             transform-origin: 4px 0px;
@@ -57,7 +60,7 @@
         & input:checked ~ span {
             opacity: 1;
             transform: rotate(45deg) translate(-2px, -1px);
-            background: #232323;
+            background: $text;
         }
         & input:checked ~ span:nth-last-child(3)
         {
@@ -80,7 +83,8 @@
         padding-left: 70px;
         padding-top: 100px;
 
-        background: #ededed;
+        color: $text;
+        background: $dominant;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
 
@@ -93,5 +97,15 @@
             padding-left: 10px;
             font-size: 22px;
         }
+
+        border-right-width: 2px;
+        border-right-color: $accent;
+        border-right-style: groove;
+        border-bottom-right-radius: 10px;
+        border-bottom-width: 2px;
+        border-bottom-color: $accent;
+        border-bottom-style: groove;
+
+        box-shadow: 0px 0px 20px 7px $accent;
     }
 }
