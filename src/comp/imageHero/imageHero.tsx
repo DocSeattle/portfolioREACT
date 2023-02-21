@@ -1,6 +1,6 @@
 import "./imageHero.scss";
 
-import { Scanlines } from "../scanlines/scanlines";
+import {Scanlines} from "../scanlines/scanlines";
 
 export const ImageHero = (): React.ReactElement => { 
     return (
